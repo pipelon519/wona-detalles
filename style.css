@@ -3,12 +3,12 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
 
 :root {
-    --beige: #F5F5DC;
-    --pink: #FFC0CB;
-    --light-aqua: #AFEEEE;
-    --gold: #FFD700;
-    --dark-text: #333;
+    --beige: #FDF5E6; /* Un beige más cálido */
+    --pink: #FFB6C1; /* Rosa claro */
+    --light-aqua: #B0E0E6; /* Aguamarina pálido */
+    --dark-text: #5C5470;
     --white: #fff;
+    --gold: #FFD700;
 }
 
 body {
@@ -16,13 +16,14 @@ body {
     margin: 0;
     background-color: var(--beige);
     color: var(--dark-text);
+    overflow-x: hidden;
 }
 
 /* Header & Navigation */
 .top-bar {
     background-color: var(--light-aqua);
     color: var(--dark-text);
-    padding: 8px 30px;
+    padding: 8px 50px;
     font-size: 14px;
     display: flex;
     justify-content: space-between;
@@ -37,14 +38,17 @@ body {
 
 header {
     background-color: var(--white);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 15px 50px;
 }
 
 .logo a {
@@ -62,7 +66,7 @@ nav {
 }
 
 .nav-links li {
-    margin: 0 20px;
+    margin: 0 25px;
 }
 
 .nav-links a {
@@ -80,7 +84,7 @@ nav {
 .nav-icons a {
     color: var(--dark-text);
     font-size: 20px;
-    margin-left: 20px;
+    margin-left: 25px;
     transition: color 0.3s ease;
 }
 
@@ -90,22 +94,29 @@ nav {
 
 /* Hero Section */
 #hero {
-    padding: 60px 20px;
+    padding: 60px 50px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    min-height: 80vh;
+}
+
+.hero-content {
+    max-width: 50%;
 }
 
 .hero-content h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    margin: 0;
+    font-size: 5vw;
+    line-height: 1.1;
+    margin: 10px 0;
 }
 
 .hero-content .subtitle {
     color: var(--pink);
     font-weight: 700;
     font-size: 18px;
+    letter-spacing: 1px;
 }
 
 .hero-content p {
@@ -118,36 +129,41 @@ nav {
     background-color: var(--pink);
     color: var(--white);
     border: none;
-    padding: 15px 30px;
+    padding: 15px 35px;
     font-size: 18px;
+    font-weight: 700;
     cursor: pointer;
     text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    transition: all 0.3s ease;
     display: inline-block;
     margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.5);
 }
 
 .button:hover {
-    background-color: #E7AAB7;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 182, 193, 0.7);
 }
 
 .button-secondary {
-    background: none;
+    background: transparent;
     border: 2px solid var(--pink);
     color: var(--pink);
     margin-left: 15px;
+    box-shadow: none;
 }
 
 .hero-image img {
     max-width: 450px;
-    border-radius: 20px;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
-
 
 /* Occasions Section */
 #occasions {
     text-align: center;
+    padding: 80px 50px;
 }
 
 #occasions .subtitle {
@@ -157,30 +173,39 @@ nav {
 }
 
 .occasions-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
 
 .occasion-card {
     text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.occasion-card:hover {
+    transform: translateY(-10px);
 }
 
 .occasion-card .icon {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     background-color: var(--white);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    color: var(--pink);
+    transition: all 0.3s ease;
 }
 
-.occasion-card .icon img {
-    max-width: 60px;
+.occasion-card:hover .icon {
+    background-color: var(--pink);
+    color: var(--white);
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.6);
 }
 
 .occasion-card h3 {
@@ -188,36 +213,45 @@ nav {
     font-size: 22px;
 }
 
-
 /* Promo Section */
 #promo-products {
     display: flex;
     gap: 30px;
     justify-content: center;
+    padding: 60px 50px;
+    flex-wrap: wrap;
 }
 
 .promo-card {
     border-radius: 20px;
     padding: 40px;
+    color: var(--dark-text);
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.promo-card.bg-pink {
+    background-color: var(--pink);
     color: var(--white);
-    max-width: 500px;
 }
 
 .promo-card.bg-aqua {
     background-color: var(--light-aqua);
 }
 
-.promo-card.bg-pink {
-    background-color: var(--pink);
-}
-
 .promo-card .discount {
-    background-color: var(--gold);
+    background-color: rgba(255,255,255,0.8);
     color: var(--dark-text);
-    padding: 5px 10px;
+    padding: 5px 15px;
     border-radius: 5px;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .promo-card h3 {
@@ -226,9 +260,46 @@ nav {
     margin: 10px 0;
 }
 
-.promo-card a {
-    color: var(--white);
-    text-decoration: underline;
+.promo-card .button {
+    background-color: var(--white);
+    color: var(--dark-text);
+    box-shadow: none;
+}
+
+/* About Us Home Section */
+#about-us-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 50px;
+    gap: 50px;
+}
+
+.about-image img {
+    max-width: 400px;
+    border-radius: 50%;
+}
+
+.about-content {
+    max-width: 50%;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.stat-item span {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--pink);
+}
+
+.stat-item p {
+    margin: 0;
+    font-size: 16px;
 }
 
 /* General Section Styling */
@@ -239,8 +310,20 @@ section {
 h2 {
     font-family: 'Playfair Display', serif;
     font-size: 42px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     text-align: center;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 footer {
