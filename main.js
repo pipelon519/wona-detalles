@@ -90,4 +90,23 @@ document.addEventListener('DOMContentLoaded', function () {
             mobileMenu.classList.toggle('active');
         });
     }
+
+    // Product Slider (Swiper)
+    const productSlider = new Swiper('.product-slider', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 3,
+            },
+        },
+    });
 });
