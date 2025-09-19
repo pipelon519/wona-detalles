@@ -1,125 +1,131 @@
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wona - Regalos y Sorpresas</title>
+    <title>Wona Detalles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="top-bar">
-        <div class="contact-info">
-            <span><i class="fas fa-phone"></i> +123 456 789</span>
-        </div>
-        <div class="promo">
-            <a href="#">¡Regístrate y obtén un 20% de descuento en tu primera compra!</a>
-        </div>
-        <div class="social-media">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </div>
-    <header>
-        <nav>
+
+    <div class="container">
+        <header class="main-header">
             <div class="logo">
-                <a href="index.html">Wona</a>
+                <img src="assets/logo sin fondo.png" alt="Wona Logo">
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="products.html">Tienda</a></li>
-                <li><a href="about.html">Sobre Nosotros</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-            <div class="nav-icons">
-                <a href="#"><i class="fas fa-search"></i></a>
-                <a href="#"><i class="far fa-heart"></i></a>
-                <a href="login.html"><i class="far fa-user"></i></a>
-                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-            </div>
-        </nav>
-    </header>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="about.html">SOBRE</a></li>
+                    <li><a href="products.html">PRODUCTOS</a></li>
+                    <li><a href="galery.html">GALERIA</a></li>
+                    <li><a href="contact.html">CONTACTANOS</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Open navigation menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
 
-    <main>
-        <section id="hero" class="fade-in">
-            <div class="hero-content">
-                <span class="subtitle">Tu Tienda de Regalos de Confianza</span>
-                <h1>El Destino Definitivo para Comprar Regalos</h1>
-                <p>Nos especializamos en crear detalles únicos que expresan amor, gratitud y alegría, siempre con un toque de elegancia.</p>
-                <a href="products.html" class="button">Compra Ahora <i class="fas fa-arrow-right"></i></a>
-                <a href="products.html" class="button button-secondary">Ver Productos</a>
-            </div>
-            <div class="hero-image">
-                <img src="https://picsum.photos/450/500?image=1060" alt="Mujer con flores">
-            </div>
-        </section>
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <span class="subtitle">VEN Y LLEVATE UN HERMOSO REGALO</span>
+                    <h1>Sueños & Amor</h1>
+                    <p>Cada detalle de Wona nace del amor y está pensado para convertir tus sueños en momentos inolvidables.</p>
+                    <div class="hero-buttons">
+                        <a href="products.html" class="button primary">Comprar Ahora</a>
+                        <a href="about.html" class="button secondary">Mas informacion</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                     <img src="assets/rosas.png" alt="Tulipanes Wona">
+                </div>
+            </section>
 
-        <section id="occasions" class="fade-in">
-            <span class="subtitle">Ocasiones</span>
-            <h2>Comprar por Ocasiones</h2>
-            <div class="occasions-grid">
-                <div class="occasion-card">
-                    <div class="icon"><i class="fas fa-ring fa-3x"></i></div>
-                    <h3>Bodas</h3>
+            <section id="favourites">
+                <div class="favourites-container">
+                    <h2>NUESTROS DETALLES FAVORITOS</h2>
+                    <p class="subtitle-fav">Hechos a mano en nuestro taller, haz que tu celebración o evento sea más especial con un pedido de Wona.</p>
+                    <div class="favourites-grid">
+                        <div class="favourite-card">
+                            <img src="assets/desayuno-1.png" alt="Desayuno Sorpresa">
+                            <h3>DESAYUNOS SORPRESA</h3>
+                            <p>Cualquiera que sea la forma en que cuentes tu historia, podemos marcar la diferencia.</p>
+                            <a href="#" class="button-fav">VER MÁS</a>
+                        </div>
+                        <div class="favourite-card">
+                            <img src="assets/ramo-1.jpeg" alt="Arreglo Floral">
+                            <h3>ARREGLOS FLORALES</h3>
+                            <p>Cualquiera que sea la forma en que cuentes tu historia, podemos marcar la diferencia.</p>
+                            <a href="#" class="button-fav">VER MÁS</a>
+                        </div>
+                        <div class="favourite-card">
+                            <img src="assets/globos-1.jfif" alt="Caja de Regalo">
+                            <h3>CAJAS DE REGALO</h3>
+                            <p>Cualquiera que sea la forma en que cuentes tu historia, podemos marcar la diferencia.</p>
+                            <a href="#" class="button-fav">VER MÁS</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="occasion-card">
-                    <div class="icon"><i class="fas fa-gift fa-3x"></i></div>
-                    <h3>Cumpleaños</h3>
-                </div>
-                <div class="occasion-card">
-                    <div class="icon"><i class="fas fa-heart fa-3x"></i></div>
-                    <h3>Aniversario</h3>
-                </div>
-                <div class="occasion-card">
-                    <div class="icon"><i class="fas fa-handshake fa-3x"></i></div>
-                    <h3>Agradecimiento</h3>
-                </div>
-                <div class="occasion-card">
-                    <div class="icon"><i class="fas fa-graduation-cap fa-3x"></i></div>
-                    <h3>Graduación</h3>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="promo-products" class="fade-in">
-            <div class="promo-card bg-pink">
-                <span class="discount">20% Descuento</span>
-                <h3>Hermosos Ramos Frescos</h3>
-                <p>Detalles únicos para expresar amor, gratitud y alegría.</p>
-                <a href="products.html" class="button">Comprar</a>
-            </div>
-            <div class="promo-card bg-aqua">
-                <span class="discount">25% Descuento</span>
-                <h3>Colección Pura Flor</h3>
-                <p>Regalos que transforman momentos especiales en recuerdos inolvidables.</p>
-                <a href="products.html" class="button">Comprar</a>
-            </div>
-        </section>
-
-        <section id="about-us-home" class="fade-in">
-             <div class="about-image">
-                <img src="https://picsum.photos/400/400?image=1027" alt="Sobre Nosotros">
-            </div>
-            <div class="about-content">
-                <span class="subtitle">Sobre Nosotros</span>
-                <h2>Llevando la Belleza de la Naturaleza a tu Puerta</h2>
-                <p>En Wona no solo vendemos regalos, creamos experiencias que llegan al corazón. Nuestro propósito es ayudarte a sorprender, emocionar y fortalecer vínculos a través de detalles pensados con cariño y estilo.</p>
-                 <div class="stats">
-                    <div class="stat-item"><span>20+</span><p>Categorías</p></div>
-                    <div class="stat-item"><span>1000+</span><p>Productos</p></div>
-                    <div class="stat-item"><span>99%</span><p>Clientes Satisfechos</p></div>
+            <section id="reasons">
+                <div class="reasons-container">
+                    <h2>4 Razones para escogernos</h2>
+                    <div class="reasons-grid">
+                        <div class="reason-card">
+                            <span class="reason-number">1</span>
+                            <h3>Calidad y Diseño</h3>
+                            <p>Utilizamos solo los mejores productos y flores, garantizando que cada detalle conserve su belleza y frescura.</p>
+                        </div>
+                        <div class="reason-card">
+                            <span class="reason-number">2</span>
+                            <h3>Detalles Únicos</h3>
+                            <p>Valoramos tu tiempo y ofrecemos un servicio rápido y eficiente sin comprometer la alta calidad de nuestros arreglos.</p>
+                        </div>
+                        <div class="reason-card">
+                            <span class="reason-number">3</span>
+                            <h3>Creamos Experiencias</h3>
+                            <p>Ofrecemos una amplia selección de diseños y opciones que se adaptan a tus gustos y presupuesto.</p>
+                        </div>
+                        <div class="reason-card">
+                            <span class="reason-number">4</span>
+                            <h3>Variedad para Ocasiones</h3>
+                            <p>Estamos listos para hacer realidad cualquier proyecto, sin importar la complejidad, en cualquier lugar que necesites.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-    </main>
+        </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2024 Wona. Todos los derechos reservados.</p>
+        <footer class="page-footer">
+            <span>CONTACT US +123 456 789</span>
+            <span>Your company © XXIV. All rights reserved.</span>
+        </footer>
+    </div>
+
+    <!-- Sticky Capsule Header -->
+    <div id="sticky-header" class="sticky-header hidden">
+        <div class="logo">
+            <img src="assets/logo sin fondo.png" alt="Wona Logo">
         </div>
-    </footer>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">INICIO</a></li>
+                <li><a href="about.html">SOBRE</a></li>
+                <li><a href="products.html">PRODUCTOS</a></li>
+                <li><a href="galery.html">GALERIA</a></li>
+                <li><a href="contact.html">CONTACTANOS</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <script src="main.js"></script>
 </body>
