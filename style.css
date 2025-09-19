@@ -1,6 +1,6 @@
 
 :root {
-    --primary-color: #ff6ff3;
+    --primary-color: #b62c61;
     --secondary-color: #f9d7e7;
     --background-color: #fce9f2;
     --text-color: #333;
@@ -57,7 +57,7 @@ body {
 }
 
 .main-nav a:hover {
-    color: #b62c61e0;
+    color: #b62c61;
     padding: 0px 10px;
     background: pink;
 }
